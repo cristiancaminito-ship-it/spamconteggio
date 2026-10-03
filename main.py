@@ -603,10 +603,8 @@ def main() -> None:
         config.timezone_name,
     )
 
-if __name__ == "__main__":
+
+if name == "main":
     main()
-        application.run_polling(
-            allowed_updates=[Update.MESSAGE, Update.CALLBACK_QUERY],
-            drop_pending_updates=True,
-        )
+    application.run_polling(drop_pending_updates=True)
 

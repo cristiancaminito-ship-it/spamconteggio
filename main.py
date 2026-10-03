@@ -602,8 +602,7 @@ def main() -> None:
         config.daily_limit,
         config.timezone_name,
     )
-    try:
-     
+
       from telegram_spam_bot.bot import main
 
 
@@ -613,5 +612,4 @@ if __name__ == "__main__":
             allowed_updates=[Update.MESSAGE, Update.CALLBACK_QUERY],
             drop_pending_updates=True,
         )
-    finally:
-        store.close()
+
